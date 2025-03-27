@@ -1,0 +1,45 @@
+version: 4.2.25
+session: 67e4a30af66458c067614649
+steps:
+  - prompt: Click on "+ New List" button.
+    commands:
+      - command: hover-text
+        text: Enter username or email
+        description: username input field
+        action: click
+      - command: type
+        text: testuser
+  - prompt: Click on "+ New List" button.
+    commands:
+      - command: hover-text
+        text: Enter your password
+        description: password input field
+        action: click
+      - command: type
+        text: password123
+      - command: hover-text
+        text: Login
+        description: login button
+        action: click
+  - prompt: Click on "+ New List" button.
+    commands:
+      - command: hover-text
+        text: Continue to App
+        description: continue to app button in cookie preferences dialog
+        action: click
+      - command: scroll-until-text
+        text: + New List
+        direction: down
+        method: keyboard
+      - command: hover-text
+        text: + New List
+        description: new list button
+        action: click
+  - prompt: Enter "Test List" in the list name field.
+    commands:
+      - command: hover-text
+        text: List name
+        description: list name input field
+        action: click
+      - command: type
+        text: Test List
