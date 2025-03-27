@@ -1,0 +1,29 @@
+version: 4.2.25
+session: 67e4a14f4dc25283aa086d30
+steps:
+  - prompt: login with username alex and password foobarst234
+    commands:
+      - command: hover-text
+        text: Enter username or email
+        description: username input field
+        action: click
+      - command: type
+        text: alex
+  - prompt: login with username alex and password foobarst234
+    commands:
+      - command: hover-text
+        text: Enter your password
+        description: password input field
+        action: click
+      - command: type
+        text: foobarst234
+      - command: hover-text
+        text: Login
+        description: login button
+        action: click
+  - prompt: accept cookies
+    commands:
+      - command: hover-text
+        text: Continue to App
+        description: button to accept cookies and continue
+        action: click
