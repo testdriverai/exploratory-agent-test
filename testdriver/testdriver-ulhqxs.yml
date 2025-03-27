@@ -1,0 +1,27 @@
+version: 4.2.12
+session: 67e498bcf66458c067614456
+steps:
+  - prompt: login with username ${TD_USERNAME} and password ${TD_PASSWORD}
+    commands:
+      - command: hover-text
+        text: Enter username or email
+        description: username input field
+        action: click
+      - command: type
+        text: ${TD_USERNAME}
+      - command: hover-text
+        text: Enter your password
+        description: password input field
+        action: click
+      - command: type
+        text: ${TD_PASSWORD}
+      - command: hover-text
+        text: Login
+        description: login button
+        action: click
+  - prompt: accept cookies
+    commands:
+      - command: hover-text
+        text: Continue to App
+        description: button to accept cookies and proceed
+        action: click
